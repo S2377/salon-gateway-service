@@ -6,7 +6,6 @@ WORKDIR /build
 # Copy required files first (for cache)
 COPY pom.xml .
 COPY mvnw .
-COPY .mvn .mvn
 
 # Download dependencies
 RUN ./mvnw dependency:go-offline -B
