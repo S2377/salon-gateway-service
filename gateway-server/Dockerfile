@@ -3,9 +3,6 @@ FROM maven:3.9.6-eclipse-temurin-17 AS build
 
 WORKDIR /build
 
-# Download dependencies
-RUN ./mvnw dependency:go-offline -B
-
 # Package the application
 RUN ./mvnw clean package -DskipTests
 
