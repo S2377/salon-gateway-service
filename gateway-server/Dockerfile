@@ -11,9 +11,6 @@ COPY .mvn .mvn
 # Download dependencies
 RUN ./mvnw dependency:go-offline -B
 
-# Copy the entire source code
-COPY src ./src
-
 # Package the application
 RUN ./mvnw clean package -DskipTests
 
